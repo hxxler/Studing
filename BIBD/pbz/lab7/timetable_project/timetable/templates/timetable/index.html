@@ -1,0 +1,31 @@
+<!-- timetable/templates/timetable/index.html -->
+
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <title>Timetable</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <ul>
+        {% for cls in classes %}
+            <li>{{ cls.Subject }} - {{ cls.HoursPerWeek }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>ClassSubject</h1>
+    <ul>
+        {% for cs in class_subjects %}
+            <li>{{ cs.Subject }} - {{ cs.TeacherID }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Teacher</h1>
+    <ul>
+        {% for teacher in teachers %}
+            <li>{{ teacher.TeacherName }} - {{ teacher.Specialization }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
