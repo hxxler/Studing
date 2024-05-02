@@ -1,6 +1,0 @@
-таблица class имеет 3 колонки:
-ClassID; Subject; HoursPerWeek.
-таблица classsubject имеет 4 колонки:
-ClassID; ClassLetter; Subjet; TeacherID.
-таблица teacher имеет 4 колонки:
-TeacherID; TeacherName; Specialization; Experience.

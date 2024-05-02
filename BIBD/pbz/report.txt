@@ -1,6 +1,0 @@
-Отчет
-Поиск: мат
-Сортировка: DESC
-Таблица: Class
-
-ClassID: 1, Subject: Математика, HoursPerWeek: 5
