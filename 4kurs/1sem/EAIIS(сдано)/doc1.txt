@@ -1,0 +1,2 @@
+Artificial intelligence (AI) is the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.
+Machine learning (ML) is a subset of AI, and it enables machines to learn from data without being explicitly programmed. This technology is being applied in various industries, including healthcare, finance, and transportation.

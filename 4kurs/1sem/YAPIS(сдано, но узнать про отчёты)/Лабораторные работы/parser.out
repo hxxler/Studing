@@ -1,0 +1,149 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> expression SEMICOLON program
+Rule 2     program -> expression
+Rule 3     expression -> expression PLUS element
+Rule 4     expression -> element
+Rule 5     element -> ID
+Rule 6     element -> STRING
+Rule 7     element -> CHAR
+
+Terminals, with rules where they appear
+
+CHAR                 : 7
+ID                   : 5
+PLUS                 : 3
+SEMICOLON            : 1
+STRING               : 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+element              : 3 4
+expression           : 1 2 3
+program              : 1 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . expression SEMICOLON program
+    (2) program -> . expression
+    (3) expression -> . expression PLUS element
+    (4) expression -> . element
+    (5) element -> . ID
+    (6) element -> . STRING
+    (7) element -> . CHAR
+
+    ID              shift and go to state 4
+    STRING          shift and go to state 5
+    CHAR            shift and go to state 6
+
+    program                        shift and go to state 1
+    expression                     shift and go to state 2
+    element                        shift and go to state 3
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> expression . SEMICOLON program
+    (2) program -> expression .
+    (3) expression -> expression . PLUS element
+
+    SEMICOLON       shift and go to state 7
+    $end            reduce using rule 2 (program -> expression .)
+    PLUS            shift and go to state 8
+
+
+state 3
+
+    (4) expression -> element .
+
+    SEMICOLON       reduce using rule 4 (expression -> element .)
+    PLUS            reduce using rule 4 (expression -> element .)
+    $end            reduce using rule 4 (expression -> element .)
+
+
+state 4
+
+    (5) element -> ID .
+
+    SEMICOLON       reduce using rule 5 (element -> ID .)
+    PLUS            reduce using rule 5 (element -> ID .)
+    $end            reduce using rule 5 (element -> ID .)
+
+
+state 5
+
+    (6) element -> STRING .
+
+    SEMICOLON       reduce using rule 6 (element -> STRING .)
+    PLUS            reduce using rule 6 (element -> STRING .)
+    $end            reduce using rule 6 (element -> STRING .)
+
+
+state 6
+
+    (7) element -> CHAR .
+
+    SEMICOLON       reduce using rule 7 (element -> CHAR .)
+    PLUS            reduce using rule 7 (element -> CHAR .)
+    $end            reduce using rule 7 (element -> CHAR .)
+
+
+state 7
+
+    (1) program -> expression SEMICOLON . program
+    (1) program -> . expression SEMICOLON program
+    (2) program -> . expression
+    (3) expression -> . expression PLUS element
+    (4) expression -> . element
+    (5) element -> . ID
+    (6) element -> . STRING
+    (7) element -> . CHAR
+
+    ID              shift and go to state 4
+    STRING          shift and go to state 5
+    CHAR            shift and go to state 6
+
+    expression                     shift and go to state 2
+    program                        shift and go to state 9
+    element                        shift and go to state 3
+
+state 8
+
+    (3) expression -> expression PLUS . element
+    (5) element -> . ID
+    (6) element -> . STRING
+    (7) element -> . CHAR
+
+    ID              shift and go to state 4
+    STRING          shift and go to state 5
+    CHAR            shift and go to state 6
+
+    element                        shift and go to state 10
+
+state 9
+
+    (1) program -> expression SEMICOLON program .
+
+    $end            reduce using rule 1 (program -> expression SEMICOLON program .)
+
+
+state 10
+
+    (3) expression -> expression PLUS element .
+
+    SEMICOLON       reduce using rule 3 (expression -> expression PLUS element .)
+    PLUS            reduce using rule 3 (expression -> expression PLUS element .)
+    $end            reduce using rule 3 (expression -> expression PLUS element .)
+

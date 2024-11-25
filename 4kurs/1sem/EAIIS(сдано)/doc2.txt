@@ -1,0 +1,2 @@
+Deep learning is a type of machine learning that mimics the workings of the human brain in processing data for use in decision making. Deep learning algorithms are used in self-driving cars, virtual assistants, and for diagnosing diseases.
+Natural language processing (NLP) is another key area of artificial intelligence. NLP enables machines to understand, interpret, and respond to human language. This technology powers search engines, translation systems, and chatbots.
